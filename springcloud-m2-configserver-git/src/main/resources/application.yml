@@ -1,0 +1,26 @@
+---
+server:
+  port: 8888
+
+spring:
+  security:
+    user:
+      name: syvac
+      password: syvac
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+        git:
+          uri: https://github.com/sylvievdb/spring-cloudconfig
+          #username: abc
+          #password: abc
+          search-paths:
+            - 'station*'
+          repos:
+            local:
+              pattern: '*/local'
+              uri: https://github.com/sylvievdb/spring-cloudconfig-perf # alt
+              search-paths:
+                - 'station*'
